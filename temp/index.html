@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta http-equiv="refresh" content="1">-->
+    <title>Title</title>
+    <script>
+      function onClick(device, state) {
+        var address = "192.168.1.203";
+        var request = new XMLHttpRequest();
+        request.open("GET", `http://${address}/${device}?params=${state}`, false);
+        request.send(null);
+<!--        request.send();-->
+      }
+
+      function onGetInfo() {
+            alert("GetInfo");
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://192.168.1.203/relay1', false);
+            xhr.send();
+
+            if (xhr.status != 200) {
+              alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+            }
+            else {
+              alert( xhr.responseText ); // responseText -- текст ответа.
+            }
+      }
+  </script>
+</head>
+
+<body>
+
+<style>
+.header {
+    background-color: #FFBA00 !important;
+    text-align: center;
+}
+
+.button_1674200952262 {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #0aff5b !important;
+    color: #100e0e !important;
+    border: 4px solid #006089 !important;
+    border-radius: 18px !important;
+    font-size: 16px !important;
+    padding: 6px 24px !important;
+    transition: all 0.6s ease !important;
+}
+.button_1674200952262:hover {
+    text-decoration: none !important;
+    background-color: #006089 !important;
+    color: #ffeded !important;
+    border-color: #006089 !important;
+}
+.buttonOff {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #F60018 !important;
+    color: #100e0e !important;
+    border: 4px solid #006089 !important;
+    border-radius: 18px !important;
+    font-size: 16px !important;
+    padding: 6px 24px !important;
+    transition: all 0.6s ease !important;
+}
+.buttonOff:hover {
+    text-decoration: none !important;
+    background-color: #006089 !important;
+    color: #ffeded !important;
+    border-color: #006089 !important;
+}
+</style>
+
+<form>
+<h2>Relays control</h2>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+    <tbody>
+    <tr>
+        <td style="width: 11.4686%;" class="header"><strong>№</strong></td>
+        <td style="width: 38.5314%;" class="header"><strong>Name</strong></td>
+        <td style="width: 25%;" class="header"><strong>State</strong></td>
+        <td style="width: 25%;" class="header"><strong>Control</strong></td>
+    </tr>
+    <tr>
+        <td style="width: 11.4686%; text-align: center;">1</td>
+        <td style="width: 38.5314%; text-align: center;">Relay №1</td>
+        <td style="width: 25%; text-align: center;">ON</td>
+        <td style="width: 25%; text-align: center;">
+            <button type="button" id="r1_on" class="button_1674200952262" onClick="onClick('relay1', 1)">ON</button>
+            <button type="button" id="r1_off" class="buttonOff" onClick="onClick('relay1', 0)">OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 11.4686%; text-align: center;">2</td>
+        <td style="width: 38.5314%; text-align: center;">Relay №2 </td>
+        <td style="width: 25%; text-align: center;"></td>
+        <td style="width: 25%; text-align: center;">
+            <button type="button" id="r2_on" class="button_1674200952262" onClick="onClick('relay2', 1)">ON</button>
+            <button type="button" id="r2_off" class="buttonOff" onClick="onClick('relay2', 0)">OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 11.4686%; text-align: center;">3</td>
+        <td style="width: 38.5314%; text-align: center;">Relay №3</td>
+        <td style="width: 25%; text-align: center;"></td>
+        <td style="width: 25%; text-align: center;">
+            <button type="button" id="r3_on" class="button_1674200952262" onClick="onClick('relay3', 1)">ON</button>
+            <button type="button" id="r3_off" class="buttonOff" onClick="onClick('relay3', 0)">OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 11.4686%; text-align: center;">4</td>
+        <td style="width: 38.5314%; text-align: center;">Relay №4</td>
+        <td style="width: 25%; text-align: center;"></td>
+        <td style="width: 25%; text-align: center;">
+            <button type="button" id="r4_on" class="button_1674200952262" onClick="onClick('relay4', 1)">ON</button>
+            <button type="button" id="r4_off" class="buttonOff" onClick="onClick('relay4', 0)">OFF</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</form>
+
+<form>
+    <button type="button" id="btnInfo" class="button_1674200952262" onClick="onGetInfo()">ON</button>
+</form>
+
+
+</body>
+
+</html>

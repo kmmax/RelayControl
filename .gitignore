@@ -1,0 +1,13 @@
+
+*.pro.user*
+/bin/*
+CHANGELOG.html
+TODO.html
+README.html
+/doc/documentation/*
+!/doc/documentation/.gitkeep
+
+!.gitkeep
+
+/web/WebClient/.idea
+
