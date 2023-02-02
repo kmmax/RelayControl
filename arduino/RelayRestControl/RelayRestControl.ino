@@ -116,7 +116,10 @@ void loop() {
       Serial.println(res);
       // Send HTTP header:
       bfill.emit_p(
-        PSTR("HTTP/1.0 200 OK\r\nContent-Type: application/json\r\nPragma: no-cache\r\n\r\n"));
+
+		  // !!! без Access-Control-Allow-Origin не работают GET запросы из браузера (неверный ответ)
+      //PSTR("HTTP/1.0 200 OK\r\nContent-Type: application/json\r\nPragma: no-cache\r\n\r\n"));    
+		  PSTR("HTTP/1.0 200 OK\r\nContent-Type: text/html\r\nPragma: no-cache\r\nAccess-Control-Allow-Origin: *\r\n\r\n"));
       // Send result:
       bfill.emit_raw(res, strlen(res));
       rest.resetBuffer();
