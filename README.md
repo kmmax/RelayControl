@@ -33,8 +33,8 @@ Request:
 ~~~bash
 	http://192.168.1.203/relay1?params=1	// switch on Relay #1
 	http://192.168.1.203/relay1?params=0	// switch off Relay #1
-	http://192.168.1.203/relay1			 // get info about Relay #1 without switching
-											// possible relay values: relay1 .. relay4
+	http://192.168.1.203/relay1		// get info about Relay #1 without switching
+						// possible relay values: relay1 .. relay4
 ~~~
 Response (JSON)
 ~~~bash
