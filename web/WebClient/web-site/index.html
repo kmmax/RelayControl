@@ -11,17 +11,16 @@
 <body>
 <form>
 <h2>Relays control</h2>
-<table style="border-collapse: collapse; width: 100%;" border="1">
+<table border="2">
+    <caption>List of relays</caption>
+    <thead class="header">
+        <th scope="col">Name</th>
+        <th scope="col">State</th>
+        <th scope="col">Control</th>
+    </thead>
     <tbody>
     <tr>
-        <td style="width: 11.4686%;" class="header"><strong>№</strong></td>
-        <td style="width: 38.5314%;" class="header"><strong>Name</strong></td>
-        <td style="width: 25%;" class="header"><strong>State</strong></td>
-        <td style="width: 25%;" class="header"><strong>Control</strong></td>
-    </tr>
-    <tr>
-        <td style="width: 11.4686%; text-align: center;">1</td>
-        <td style="width: 38.5314%; text-align: center;">Relay №1</td>
+        <th scope="row">Relay №1</th>
         <td id="lamp1" style="width: 25%; text-align: center;">ON</td>
         <td style="width: 25%; text-align: center;">
             <button type="button" id="r1_on" class="button_1674200952262" onClick="relayState('relay1', 'lamp1', 1)">ON</button>
@@ -29,8 +28,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 11.4686%; text-align: center;">2</td>
-        <td style="width: 38.5314%; text-align: center;">Relay №2 </td>
+        <th scope="row">Relay №2</th>
         <td id="lamp2" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
             <button type="button" id="r2_on" class="button_1674200952262" onClick="relayState('relay2', 'lamp2', 1)">ON</button>
@@ -38,8 +36,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 11.4686%; text-align: center;">3</td>
-        <td style="width: 38.5314%; text-align: center;">Relay №3</td>
+        <th scope="row">Relay №3</th>
         <td id="lamp3" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
             <button type="button" id="r3_on" class="button_1674200952262" onClick="relayState('relay3', 'lamp3', 1)">ON</button>
@@ -47,8 +44,7 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 11.4686%; text-align: center;">4</td>
-        <td style="width: 38.5314%; text-align: center;">Relay №4</td>
+        <th scope="row">Relay №4</th>
         <td id="lamp4" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
             <button type="button" id="r4_on" class="button_1674200952262" onClick="relayState('relay4', 'lamp4', 1)">ON</button>

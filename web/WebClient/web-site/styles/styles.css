@@ -38,3 +38,35 @@
     color: #ffeded !important;
     border-color: #006089 !important;
 }
+
+caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: top;
+    color: #210768;
+    text-align: right;
+    letter-spacing: 1px; 
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+
+/* typography */
+
+  
+  thead th:nth-child(1) {
+    width: 33%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 30%;
+  }
