@@ -1,13 +1,13 @@
-#RelayControl
+# RelayControl
 **Controlling of "arduino-relay" by using web browser through ethernet.**
 
 This project is designed for Arduino which performs the functions of ethernet relay witch controlled by using web-browser. Number of outputs is 4.
 
-####Possibilities:
+#### Possibilities:
 - switching on/off the relay;
 - display of their status;
 
-####Requirements
+#### Requirements
 - Arduino Uno/Nano shield;
 - Ethernet Shield on ECN28J60 for Arduino Nano;
 
