@@ -5,44 +5,7 @@
 <!--    <meta http-equiv="refresh" content="1">-->
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-    <script>
-      function relayState(device, lamp, state=undefined) {
-        var address = "192.168.1.203";
-
-        const url_set = `http://${address}/${device}?params=${state}`;
-        const url_get = `http://${address}/${device}`;
-        
-        let url = url_get;
-        if (1 == state || 0 == state) {
-            url = url_set;
-        }
-        console.log(url);
-
-        fetch(url, {
-            mode: 'cors' 
-        })
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            let authors = data;
-
-            console.log(`State: ${authors.return_value}`)
-            console.log(lamp);
-            if (1 == authors.return_value) {
-                document.getElementById(lamp).textContent = "ON";
-            }
-            else {
-                document.getElementById(lamp).textContent = "OFF";
-            }
-        })
-        .catch(function(error) {
-            console.log("--- error ---");
-            console.log(error);
-        });
-      }
-  </script>
+    <script src="./scripts/rest_client.js"></script>   
 </head>
 
 <body>
@@ -95,12 +58,6 @@
     </tbody>
 </table>
 </form>
-<script>
-    relayState('relay1', 'lamp1');
-    relayState('relay2', 'lamp2');
-    relayState('relay3', 'lamp3');
-    relayState('relay4', 'lamp4');
-</script>
 </body>
 
 </html>

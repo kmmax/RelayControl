@@ -1,5 +1,6 @@
 "use strict";
 
+
 function relayState(device, lamp, state=undefined) {
     var address = "192.168.1.203";
 
