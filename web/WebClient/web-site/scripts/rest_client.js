@@ -27,11 +27,14 @@ function relayState(device, lamp, state=undefined) {
 
         console.log(`State: ${authors.return_value}`)
         console.log(lamp);
+        let elem = document.getElementById(lamp);
         if (1 == authors.return_value) {
-            document.getElementById(lamp).textContent = "ON";
+            elem.textContent = "ON";
+            elem.style.color = "green";
         }
         else {
-            document.getElementById(lamp).textContent = "OFF";
+            elem.textContent = "OFF";
+            elem.style.color = "red";
         }
     })
     .catch(function(error) {

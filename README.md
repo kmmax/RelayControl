@@ -10,3 +10,5 @@ This project is designed for Arduino which performs the functions of ethernet re
 This project consists of two parts:
 - arduino uno sketch;
 - html/js web client;
+
+![](./doc/images/web.png)

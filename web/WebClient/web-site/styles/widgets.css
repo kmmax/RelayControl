@@ -1,0 +1,49 @@
+/* -------- Buttons -------- */
+
+.buttonOn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #0aff3f !important;
+    color: #0f100e !important;
+    border: 4px solid #006089 !important;
+    border-radius: 18px !important;
+    font-size: 16px !important;
+    padding: 6px 22px !important;
+    transition: all 0.6s ease !important;
+}
+.buttonOn:hover {
+    text-decoration: none !important;
+    background-color: #006089 !important;
+    color: #ffeded !important;
+    border-color: #006089 !important;
+}
+
+.buttonOn:disabled {
+    opacity: 0.7;
+    background-color: #71797c !important;
+    color: #0a0a0a !important;
+}
+
+.buttonOff {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #F60018 !important;
+    color: #100e0e !important;
+    border: 4px solid #006089 !important;
+    border-radius: 18px !important;
+    font-size: 16px !important;
+    padding: 6px 22px !important;
+    transition: all 0.6s ease !important;
+}
+.buttonOff:hover {
+    text-decoration: none !important;
+    background-color: #006089 !important;
+    color: #ffeded !important;
+    border-color: #006089 !important;
+}
+
+.buttonOff:disabled {
+    opacity: 0.7;
+    background-color: #71797c !important;
+    color: #0a0a0a !important;
+}
