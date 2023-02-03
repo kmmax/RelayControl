@@ -6,46 +6,7 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <script>
-    //   function onClick(device, state) {
-    //     var address = "192.168.1.203";
-    //     var request = new XMLHttpRequest();
-    //     request.open("GET", `http://${address}/${device}?params=${state}`, false);
-    //     request.send();
-    //   }
-
-    //   function getInfo(device) {
-    //     var address = "192.168.1.203";
-
-    //     const url = `http://${address}/relay1`;
-    //     fetch(url, {
-    //         mode: 'cors' 
-    //     })
-    //     .then((response) => {
-    //         console.log("--- response ---");
-    //         return response.json();
-    //     })
-    //     .then((data) => {
-    //         console.log("--- data ---");
-    //         console.log(data);
-    //         let authors = data;
-
-    //         console.log(`State: ${authors.return_value}`)
-    //         if (1 == authors.return_value) {
-    //             console.log("ON");
-    //             document.getElementById("lamp1").textContent = "ON";
-    //         }
-    //         else {
-    //             console.log("OFF");
-    //             document.getElementById("lamp1").textContent = "OFF";
-    //         }
-    //     })
-    //     .catch(function(error) {
-    //         console.log("--- error ---");
-    //         console.log(error);
-    //     });
-    //   }
-
-      function setRelayState(device, lamp, state=undefined) {
+      function relayState(device, lamp, state=undefined) {
         var address = "192.168.1.203";
 
         const url_set = `http://${address}/${device}?params=${state}`;
@@ -100,8 +61,8 @@
         <td style="width: 38.5314%; text-align: center;">Relay №1</td>
         <td id="lamp1" style="width: 25%; text-align: center;">ON</td>
         <td style="width: 25%; text-align: center;">
-            <button type="button" id="r1_on" class="button_1674200952262" onClick="setRelayState('relay1', 'lamp1', 1)">ON</button>
-            <button type="button" id="r1_off" class="buttonOff" onClick="setRelayState('relay1', 'lamp1', 0)">OFF</button>
+            <button type="button" id="r1_on" class="button_1674200952262" onClick="relayState('relay1', 'lamp1', 1)">ON</button>
+            <button type="button" id="r1_off" class="buttonOff" onClick="relayState('relay1', 'lamp1', 0)">OFF</button>
         </td>
     </tr>
     <tr>
@@ -109,8 +70,8 @@
         <td style="width: 38.5314%; text-align: center;">Relay №2 </td>
         <td id="lamp2" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
-            <button type="button" id="r2_on" class="button_1674200952262" onClick="setRelayState('relay2', 'lamp2', 1)">ON</button>
-            <button type="button" id="r2_off" class="buttonOff" onClick="setRelayState('relay2', 'lamp2', 0)">OFF</button>
+            <button type="button" id="r2_on" class="button_1674200952262" onClick="relayState('relay2', 'lamp2', 1)">ON</button>
+            <button type="button" id="r2_off" class="buttonOff" onClick="relayState('relay2', 'lamp2', 0)">OFF</button>
         </td>
     </tr>
     <tr>
@@ -118,8 +79,8 @@
         <td style="width: 38.5314%; text-align: center;">Relay №3</td>
         <td id="lamp3" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
-            <button type="button" id="r3_on" class="button_1674200952262" onClick="setRelayState('relay3', 'lamp3', 1)">ON</button>
-            <button type="button" id="r3_off" class="buttonOff" onClick="setRelayState('relay3', 'lamp3', 0)">OFF</button>
+            <button type="button" id="r3_on" class="button_1674200952262" onClick="relayState('relay3', 'lamp3', 1)">ON</button>
+            <button type="button" id="r3_off" class="buttonOff" onClick="relayState('relay3', 'lamp3', 0)">OFF</button>
         </td>
     </tr>
     <tr>
@@ -127,18 +88,18 @@
         <td style="width: 38.5314%; text-align: center;">Relay №4</td>
         <td id="lamp4" style="width: 25%; text-align: center;"></td>
         <td style="width: 25%; text-align: center;">
-            <button type="button" id="r4_on" class="button_1674200952262" onClick="setRelayState('relay4', 'lamp4', 1)">ON</button>
-            <button type="button" id="r4_off" class="buttonOff" onClick="setRelayState('relay4', 'lamp4', 0)">OFF</button>
+            <button type="button" id="r4_on" class="button_1674200952262" onClick="relayState('relay4', 'lamp4', 1)">ON</button>
+            <button type="button" id="r4_off" class="buttonOff" onClick="relayState('relay4', 'lamp4', 0)">OFF</button>
         </td>
     </tr>
     </tbody>
 </table>
 </form>
 <script>
-    setRelayState('relay1', 'lamp1');
-    setRelayState('relay2', 'lamp2');
-    setRelayState('relay3', 'lamp3');
-    setRelayState('relay4', 'lamp4');
+    relayState('relay1', 'lamp1');
+    relayState('relay2', 'lamp2');
+    relayState('relay3', 'lamp3');
+    relayState('relay4', 'lamp4');
 </script>
 </body>
 
