@@ -11,6 +11,22 @@ This project is designed for Arduino which performs the functions of ethernet re
 - Arduino Uno/Nano shield;
 - Ethernet Shield on ECN28J60 for Arduino Nano;
 
+####Wiring diagram:
+![Wiring](./doc/images/stend.jpg)
+
+Number| Device   |  PIN  | Device   |  PIN  | Color
+------|:---------|:------|:---------|:------|:------
+1	  |  UNO   	 |  D13  | ENC28J60 | D13   | синий
+2	  |  UNO   	 |  D12  | ENC28J60 | D12   | желтый
+3	  |  UNO   	 |  D11  | ENC28J60 | D11   | коричневый
+4	  |  UNO   	 |  D10  | ENC28J60 | D10   | оранжевый
+5	  |  UNO   	 |  5V   | ENC28J60 | 5V   | красный
+6	  |  UNO   	 |  GND  | ENC28J60 | GND   | черный
+7	  |  UNO   	 |  D2  | Relay | D11   | желтый
+8	  |  UNO   	 |  D3  | Relay | D10   | оранжевый
+9	  |  UNO   	 |  5V   | Relay | VCC  | красный
+10	  |  UNO   	 |  GND  | Relay | GND   | черный
+
 This project consists from two parts:
 - arduino:
 	- IDE: Arduion IDE 2.0.3;
